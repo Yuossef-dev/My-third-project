@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0b3c95;
+    color: #333;
+    font-weight: 700;
+}
+header {
+    background: #0B3C95;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 18px;
+    padding: 5px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.nav-links a:hover {
+    color: #0B3C95;
+    background: #fff;
+}
+
+/* --- Home Section --- */
+.home-section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px 90px;
+    height: 100vh; /* خليتها 80 عشان مساحة الهيدر والموبايلات */
+}
+.home-section .content h2 {
+    font-size: 48px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.home-section .content p {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.shop-now-btn {
+    background: #FF6B35;
+    color: #ffffff;
+    border: 2px solid #FF6B35;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.shop-now-btn:hover {
+    background: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+}
+
+/* --- Product Sections --- */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* الـ Gap ده هيتوزع طول وعرض بين الـ 8 كروت */
+    background: #ffffff;
+    padding: 60px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 5px solid #0B3C95;
+}
+.product-section1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background: #F4F6F9;
+    gap: 30px;
+    padding: 60px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Cards Styling --- */
+.card, .card1 {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(11, 60, 149, 0.05);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    border: #E2E8F0 1px solid;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(11, 60, 149, 0.15);
+    border-color: #FF6B35; /* تصحيح: غيرته للبرتقالي عشان يطقم مع الزرار */
+}
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(11, 60, 149, 0.15);
+    border-color: #0B3C95;
+}
+.card img, .card1 img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.card h2, .card1 h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #0B3C95;
+    line-height: 1.4;
+}
+.card p, .card1 p {
+    color: #64748B;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* --- Buttons --- */
+.buy-btn1 {
+    background: #FF6B35;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #FF6B35;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%; /* عشان الزرار يملا الكارت ويبقى شكله منسق */
+}
+.buy-btn1:hover {
+    background: transparent;
+    color: #FF6B35;
+}
+.buy-btn {
+    background: #0B3C95;
+    color: #fff;
+    border: 2px solid #0B3C95;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+.buy-btn:hover {
+    background: transparent;
+    color: #0B3C95;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: #0B3C95;
+    color: #fff;
+    text-align: center;
+    padding: 70px 25px;
+}
+.contact-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+}
+.contact-form button {
+    background: #FF6B35; /* غيرته برتقالي عشان يكسر الأزرق الكتير هنا ويبان */
+    color: #fff;
+    border: 2px solid #FF6B35;
+    padding: 12px 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+.contact-form button:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* --- Footer --- */
+footer {
+    background: #06235c; /* أغمق سنة من الهيدر عشان يفصل */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid rgba(25px, 25px, 25px, 0.1);
+}
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* --- Responsive Design --- */
+
+/* ==============================================
+   شاشات التابلت والأجهزة المتوسطة (أصغر من 1024px)
+   ============================================== */
+@media (max-width: 1024px) {
+    .header {
+        padding: 20px 40px; /* قللنا المسافات الجانبية في الهيدر */
+    }
+    
+    .home-section {
+        padding: 50px 40px;
+    }
+    
+    .home-section .content h2 {
+        font-size: 36px; /* صغرنا الخط سنة عشان يكفي */
+    }
+
+    /* الكروت هتبقى 2 بس في السطر بدل 4 */
+    .product-section, .product-section1 {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 20px;
+    }
+}
+
+/* ==============================================
+   شاشات الموبايل (أصغر من 768px)
+   ============================================== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* الهيدر يترتب تحت بعضه */
+        gap: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap; /* لو اللينكات كتيرة تنزل تحت بعضها بمثالية */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        margin-left: 0; /* لغينا المارجن القديم واستبدلناه بالـ gap */
+        font-size: 16px;
+        padding: 5px 15px;
+    }
+
+    .home-section {
+        height: auto;
+        padding: 80px 20px;
+    }
+
+    .home-section .content h2 {
+        font-size: 28px;
+    }
+
+    .home-section .content p {
+        font-size: 16px;
+    }
+
+    /* الكروت هتبقى كارت واحد بس في السطر عشان تبان بكامل تفاصيلها */
+    .product-section, .product-section1 {
+        grid-template-columns: 1fr;
+        padding: 30px 15px;
+    }
+
+    .card h2, .card1 h2 {
+        font-size: 16px; /* تصغير بسيط لعناوين المنتجات */
+    }
+    
+    .contact-section h2 {
+        font-size: 26px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        max-width: 100%; /* الفورم تاخد عرض الشاشة بالكامل على الموبايل */
+    }
+}
